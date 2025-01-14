@@ -1,0 +1,9 @@
+﻿  Assembling syscall.asm...
+  dumblegyatt.cpp
+D:\punjabi_novirus\waifu_deleter\dumblegyatt.cpp(100,19): warning C4101: 'tp': unreferenced local variable
+D:\punjabi_novirus\waifu_deleter\dumblegyatt.cpp(99,9): warning C4101: 'token': unreferenced local variable
+  main.cpp
+  no_more_silk.cpp
+D:\punjabi_novirus\waifu_deleter\no_more_silk.cpp(26,20): warning C4312: 'type cast': conversion from 'DWORD' to 'HANDLE' of greater size
+  Generating Code...
+  waifu_deleter.vcxproj -> D:\punjabi_novirus\waifu_deleter\x64\Debug\waifu_deleter.exe
