@@ -102,7 +102,10 @@ bool syscall_injection(_In_ const char* process_id, _In_  unsigned char* payload
 		cout << "Warning: Failed to enable all required privileges" << endl;
 
 	}
-	cout << "elevataed all required privalages" << endl;
+	else {
+		cout << "elevataed all required privalages" << endl;
+	}
+	
 
 	
 	
